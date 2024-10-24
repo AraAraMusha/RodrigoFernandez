@@ -114,7 +114,7 @@ function quad(a, b, c, d) {
 function render() {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-    if (flag) theta[axis] += 2.0; // Rotate only if flag is true
+    theta[axis] += 2.0; // Rotate only if flag is true
     gl.uniform3fv(thetaLoc, theta);
 
     // Draw the cube
