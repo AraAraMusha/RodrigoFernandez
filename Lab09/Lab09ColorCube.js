@@ -10,7 +10,7 @@ var zAxis = 2;
 var theta = [0, 0, 0];
 var thetaLoc;
 var flag = true;
-var numElements = 29;
+var numElements = 15;
 
     var vertices = [
         vec3(-0.5, -0.5,  0.5),
