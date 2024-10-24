@@ -64,7 +64,7 @@ function init() {
         axis = zAxis;
     };
     document.getElementById("toggleButton").onclick = function() { // Toggle rotation
-        rotate = !rotate; // Change to match the Daniel file
+        rotate = !rotate; 
     };
 
     render();
