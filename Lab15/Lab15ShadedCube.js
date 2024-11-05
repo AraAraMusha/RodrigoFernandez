@@ -35,12 +35,12 @@ var materialShininess = 100.0;
 */
 
 // black plastic
-//
+/*
 var materialAmbient  = vec4(0.0 , 0.0 , 0.0 , 1.0);
 var materialDiffuse  = vec4(0.01 , 0.01 , 0.01 , 1.0);
 var materialSpecular = vec4(0.5 , 0.5 , 0.5, 1.0);
 var materialShininess = 32.0;
-//
+*/
 
 // brass
 /*
@@ -99,12 +99,12 @@ var materialShininess = 51.2;
 */
 
 // polished silver
-/*
+//
 var materialAmbient  = vec4(0.23125 , 0.23125 , 0.23125 , 1.0);
 var materialDiffuse  = vec4(0.2775 , 0.2775 , 0.2775 , 1.0);
 var materialSpecular  = vec4(0.773911 , 0.773911 , 0.773911 , 1.0);
 var materialShininess = 89.6;
-*/
+//
 
 var ctm;
 var ambientColor, diffuseColor, specularColor;
