@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>HW04</title>
+</HEAD>
+</head>
+<body>
+    <canvas id="gl-canvas" width="512" height="512" style="border:0px">
+        Oops ... your browser doesn't support the HTML5 canvas element.
+    </canvas>
+
+    <div>
+        <button id="toggle">Toggle Morph & Rotation</button>
+        <button id="rotateXButton">Rotate X</button>
+        <button id="rotateYButton">Rotate Y</button>
+        <button id="rotateZButton">Rotate Z</button>
+    </div>
+
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        #version 300 es
+        in vec4 aPosition1;
+        in vec4 aPosition2;
+        in vec4 aColor;
+        uniform float uMorph;
+        uniform mat4 uModelViewMatrix;
+        out vec4 vColor;
+        void main() {
+            vec4 morphedPosition = mix(aPosition1, aPosition2, uMorph);
+            gl_Position = uModelViewMatrix * morphedPosition;
+            vColor = aColor;
+        }
+    </script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        #version 300 es
+        precision mediump float;
+        in vec4 vColor;
+        out vec4 fColor;
+        void main() {
+            fColor = vColor;
+        }
+    </script>
+
+    <script type="text/javascript" src="../Common/initShaders.js"></script>
+    <script type="text/javascript" src="../Common/MVnew.js"></script>
+    <script type="text/javascript" src="HW04.js"></script>
+</body>
+</html>
