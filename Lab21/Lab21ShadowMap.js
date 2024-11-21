@@ -1,8 +1,3 @@
-// shadow map example
-
-// two objects: a rotatable cube and triangle
-// point light source behind triangle
-
 "use strict";
 
 var canvas;
@@ -91,7 +86,6 @@ function quad(a, b, c, d) {
 function colorPlane()
 {
     quad(1, 0, 2, 3);
-    
 }
 
 function triangle(a, b, c) {
@@ -136,10 +130,12 @@ function init() {
     document.getElementById("ButtonT").onclick = function(){flag = !flag;};
 
 // generate cube and triangle data
+
     colorPlane();
     triangle(0, 1, 2);
 
 //  Load shaders and initialize attribute buffers
+
     program1 = initShaders(gl, "vertex-shader-1", "fragment-shader-1");
     program2 = initShaders(gl, "vertex-shader-2", "fragment-shader-2");
 
@@ -225,6 +221,7 @@ function render() {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
 // update cube rotation matrix (its instance transformation) then render ccube
+
 
     if(flag) theta[axis] += 0.5;
 
