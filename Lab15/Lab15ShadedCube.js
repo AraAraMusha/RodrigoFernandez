@@ -75,20 +75,20 @@ var materialShininess = 76.8;
 */
 
 // gold
-/*
+/
 var materialAmbient  = vec4(0.24725 , 0.1995 , 0.0745 , 1.0);
 var materialDiffuse  = vec4(0.75164 , 0.60648 , 0.22648 , 1.0);
 var materialSpecular  = vec4(0.628281 , 0.555802 , 0.366065 , 1.0);
 var materialShininess = 51.2;
-*/
+/
 
 // pewter
-/
+/*
 var materialAmbient  = vec4(0.10588 , 0.058824 , 0.113725 , 1.0);
 var materialDiffuse  = vec4(0.42745 , 0.470588 , 0.541176 , 1.0);
 var materialSpecular  = vec4(0.3333 , 0.3333 , 0.521569 , 1.0);
 var materialShininess = 9.84615;
-/
+*/
 
 // silver
 /*
