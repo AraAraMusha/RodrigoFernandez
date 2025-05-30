@@ -226,7 +226,6 @@ function init() {
 }
 
 function render(){
-
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     if(flag) theta[axis] += 2.0;
@@ -236,13 +235,10 @@ function render(){
     modelViewMatrix = mult(modelViewMatrix, rotate(theta[yAxis], vec3(0, 1, 0)));
     modelViewMatrix = mult(modelViewMatrix, rotate(theta[zAxis], vec3(0, 0, 1)));
 
-    //console.log(modelView);
-
     gl.uniformMatrix4fv(gl.getUniformLocation(program,
-            "uModelViewMatrix"), false, flatten(modelViewMatrix));
+        "uModelViewMatrix"), false, flatten(modelViewMatrix));
 
     gl.drawArrays(gl.TRIANGLES, 0, numPositions);
-
 
     requestAnimationFrame(render);
 }
